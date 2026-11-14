@@ -1,7 +1,7 @@
 # Githubtoolcore
 
 ## Overview
-Component package providing implementation for `apps/desktop/vitruvian-tool-github/Sources/GitHubToolCore`.
+Component package providing implementation for `apps/extensions/atrium/vitruvian-github/Sources/GitHubToolCore`.
 
 ## Interface
 - `[API.swift:Transport]`
@@ -38,4 +38,4 @@ Component package providing implementation for `apps/desktop/vitruvian-tool-gith
 - [Words.swift:432]: `"tr": "GitHub isteği reddetti (HTTP %@).",`
 
 ## Verification
-- Run: `bazel test //apps/desktop/vitruvian-tool-github/Sources/GitHubToolCore/...`
+- Run: `bazel test //apps/extensions/atrium/vitruvian-github/Sources/GitHubToolCore/...`

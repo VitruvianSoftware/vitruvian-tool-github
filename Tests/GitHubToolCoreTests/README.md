@@ -1,7 +1,7 @@
 # Githubtoolcoretests
 
 ## Overview
-Component package providing implementation for `apps/desktop/vitruvian-tool-github/Tests/GitHubToolCoreTests`.
+Component package providing implementation for `apps/extensions/atrium/vitruvian-github/Tests/GitHubToolCoreTests`.
 
 ## Interface
 - `[APITests.swift:FakeTransport]`
@@ -31,4 +31,4 @@ Component package providing implementation for `apps/desktop/vitruvian-tool-gith
 - [ParityTests.swift:454]: `// GitHub refusing the query leaves the queue unknown, not empty.`
 
 ## Verification
-- Run: `bazel test //apps/desktop/vitruvian-tool-github/Tests/GitHubToolCoreTests/...`
+- Run: `bazel test //apps/extensions/atrium/vitruvian-github/Tests/GitHubToolCoreTests/...`

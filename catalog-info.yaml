@@ -25,19 +25,19 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: vitruvian-tool-github
-  description: The GitHub tool for the Vitruvian app (Swift, protocol 2) — a zip on a GitHub release of its mirror, listed in catalog/tools.json
+  name: vitruvian-github
+  description: Vitruvian GitHub for Vitruvian Atrium (Swift, protocol 2) — a zip on a GitHub release of its mirror, listed in catalog/tools.json
   annotations:
     github.com/project-slug: VitruvianSoftware/vitruvian-core
     backstage.io/techdocs-ref: dir:.
-    vitruvian.dev/release-workflow: vitruvian-tool-github-release.yaml
+    vitruvian.dev/release-workflow: vitruvian-github-release.yaml
     vitruvian.dev/release-model: zip-github-releases catalog
-    vitruvian.dev/mirror: VitruvianSoftware/vitruvian-tool-github
+    vitruvian.dev/mirror: VitruvianSoftware/vitruvian-github
   links:
-    - url: https://github.com/VitruvianSoftware/vitruvian-tool-github
+    - url: https://github.com/VitruvianSoftware/vitruvian-github
       title: GitHub Mirror
       icon: github
-    - url: https://github.com/VitruvianSoftware/vitruvian-tool-github/releases
+    - url: https://github.com/VitruvianSoftware/vitruvian-github/releases
       title: Releases
       icon: card_giftcard
 spec:

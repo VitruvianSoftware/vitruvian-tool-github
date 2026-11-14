@@ -156,7 +156,7 @@ enum ToolFiles {
         let environment = ProcessInfo.processInfo.environment
         if let runfiles = environment["TEST_SRCDIR"] {
             for workspace in [environment["TEST_WORKSPACE"], "_main"].compactMap({ $0 }) {
-                candidates.append("\(runfiles)/\(workspace)/apps/desktop/vitruvian-tool-github/\(path)")
+                candidates.append("\(runfiles)/\(workspace)/apps/extensions/atrium/vitruvian-github/\(path)")
             }
         }
         // Outside Bazel: this file is three folders below the tool's.

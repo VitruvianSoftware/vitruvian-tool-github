@@ -86,7 +86,7 @@
       {
         "id": "status",
         "title": {
-          "en": "GitHub"
+          "en": "Vitruvian GitHub"
         },
         "placement": "island",
         "icon": "arrow.triangle.branch"
@@ -94,7 +94,7 @@
       {
         "id": "settings",
         "title": {
-          "en": "GitHub"
+          "en": "Vitruvian GitHub"
         },
         "placement": "settings"
       }

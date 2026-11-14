@@ -7,7 +7,7 @@ use tests_rs_lib::mirror_workflows;
 fn workflows_dir() -> PathBuf {
     if let Ok(runfiles) = std::env::var("RUNFILES_DIR") {
         let candidate = PathBuf::from(&runfiles)
-            .join("_main/apps/desktop/vitruvian-tool-github/.github/workflows");
+            .join("_main/apps/extensions/atrium/vitruvian-github/.github/workflows");
         if candidate.join("release.yml").exists() {
             return candidate;
         }

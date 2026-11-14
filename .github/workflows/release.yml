@@ -1,9 +1,9 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 # Copyright (C) 2026 VitruvianSoftware
 
-# Publish-on-version-bump for the vitruvian-tool-github mirror. This file is
+# Publish-on-version-bump for the vitruvian-github mirror. This file is
 # written in vitruvian-core at
-# apps/desktop/vitruvian-tool-github/.github/workflows/release.yml and reaches
+# apps/extensions/atrium/vitruvian-github/.github/workflows/release.yml and reaches
 # the mirror's root with every Copybara export; it runs only there.
 #
 # vitruvian-core's release-please writes the tool's version into
@@ -124,8 +124,8 @@ jobs:
           chmod 755 "$dist/github/bin/tool"
           asset="github-tool-$V.zip"
           (cd "$dist/github" && zip -r -X "../$asset" .)
-          source="vitruvian-tool-github-$V.tar.gz"
-          git archive --format=tar.gz --prefix="vitruvian-tool-github-$V/" -o "$dist/$source" "$GITHUB_SHA"
+          source="vitruvian-github-$V.tar.gz"
+          git archive --format=tar.gz --prefix="vitruvian-github-$V/" -o "$dist/$source" "$GITHUB_SHA"
           (cd "$dist" && shasum -a 256 "$asset" > "$asset.sha256" && shasum -a 256 "$source" > "$source.sha256")
           {
             echo "ASSET=$asset"
@@ -139,11 +139,11 @@ jobs:
         run: |
           notes="$RUNNER_TEMP/notes.md"
           {
-            echo "The GitHub tool for the Vitruvian app, version $V."
+            echo "Vitruvian GitHub for Vitruvian Atrium, version $V."
             echo
             echo "## Install it"
             echo
-            echo "In Vitruvian: the Vitruvian catalog on Settings › Extensions, GitHub, Install. The app checks the download against the catalog's pinned checksum and shows its agreement sheet."
+            echo "In Vitruvian Atrium: the Vitruvian catalog on Settings › Extensions, Vitruvian GitHub, Install. The app checks the download against the catalog's pinned checksum and shows its agreement sheet."
             echo
             echo "By hand: download \`$ASSET\` below, check it, unpack it and add the folder with Add from Folder… on Settings › Extensions:"
             echo
@@ -195,9 +195,9 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh release create "v$V" --repo "$GITHUB_REPOSITORY" --verify-tag \
-            --title "GitHub tool $V" --notes-file "$RUNNER_TEMP/notes.md" \
+            --title "Vitruvian GitHub $V" --notes-file "$RUNNER_TEMP/notes.md" \
             "$DIST/$ASSET" "$DIST/$ASSET.sha256" \
-            "$DIST/vitruvian-tool-github-$V.tar.gz" "$DIST/vitruvian-tool-github-$V.tar.gz.sha256"
+            "$DIST/vitruvian-github-$V.tar.gz" "$DIST/vitruvian-github-$V.tar.gz.sha256"
 
   # What the app does with the release: fetch the zip, check it, unpack it,
   # and judge the folder, on a Mac with nothing of ours on it.

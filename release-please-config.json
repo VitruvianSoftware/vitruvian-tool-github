@@ -5,14 +5,14 @@
   "include-component-in-tag": true,
   "include-v-in-tag": true,
   "tag-separator": "-",
-  "bootstrap-sha": "b4c829496c0d6b6f5f5bfb1b9cf9e90e5ac1b78a",
+  "bootstrap-sha": "4c9e6a57137e486b37c4b73188028f2ccd291d20",
   "packages": {
-    "apps/desktop/vitruvian-tool-github": {
-      "package-name": "vitruvian-tool-github",
-      "component": "vitruvian-tool-github",
+    "apps/extensions/atrium/vitruvian-github": {
+      "package-name": "vitruvian-github",
+      "component": "vitruvian-github",
       "changelog-path": "CHANGELOG.md",
       "initial-version": "1.0.0",
-      "exclude-paths": ["apps/desktop/vitruvian-tool-github/.github"],
+      "exclude-paths": ["apps/extensions/atrium/vitruvian-github/.github"],
       "extra-files": [
         "Sources/GitHubToolCore/Version.swift",
         {

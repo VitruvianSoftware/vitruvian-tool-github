@@ -1,4 +1,4 @@
-# Agent guide: apps/desktop/vitruvian-tool-github
+# Agent guide: apps/extensions/atrium/vitruvian-github
 
 This guide adds to the root `AGENTS.md` and to `apps/desktop/AGENTS.md` for
 this subtree. The 6-point release artifact contract there is for app
@@ -62,22 +62,22 @@ bundles; this is a tool, and its one artifact is a zip (see "Releases").
 
 ## Building and testing
 
-- `bazel test --config=macos-app //apps/desktop/vitruvian-tool-github/...`
+- `bazel test --config=macos-app //apps/extensions/atrium/vitruvian-github/...`
   runs the tests, builds the tool's folder and puts it through the
   conformance script. Everything is `manual` and macOS-only; the pipeline
-  unit `vitruvian-tool-github` runs it on the `xcode-27` lane.
+  unit `vitruvian-github` runs it on the `xcode-27` lane.
 - To try it in the app: build `:tool-folder`, then Add from Folder… on
   Settings › Extensions, and pick
-  `bazel-bin/apps/desktop/vitruvian-tool-github/built/github`.
-- `bazel run //packages/vitruvian-sdk:conformance -- bazel-bin/apps/desktop/vitruvian-tool-github/built/github`
+  `bazel-bin/apps/extensions/atrium/vitruvian-github/built/github`.
+- `bazel run //packages/vitruvian-sdk:conformance -- bazel-bin/apps/extensions/atrium/vitruvian-github/built/github`
   is what `:conformance_test` runs.
 
 ## Releases
 
-`release-please` (component `vitruvian-tool-github`, tag
-`vitruvian-tool-github-vX.Y.Z`) writes the version into
+`release-please` (component `vitruvian-github`, tag
+`vitruvian-github-vX.Y.Z`) writes the version into
 `.release-please-manifest.json`, `vitruvian-tool.json` and `Version.swift`.
-Copybara exports this folder to `VitruvianSoftware/vitruvian-tool-github`,
+Copybara exports this folder to `VitruvianSoftware/vitruvian-github`,
 whose own `release.yml` tags `vX.Y.Z`, builds the universal binary, zips the
 tool's folder as `github-tool-X.Y.Z.zip` and attaches it with its `.sha256`.
 The catalog entry (`catalog/tools.json`) pins that zip; listing a new

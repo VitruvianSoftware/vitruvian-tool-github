@@ -381,7 +381,7 @@ pub fn detect(script: &str, manifest: Option<&str>, tags: &[&str]) -> (i32, Stri
 
     git(&root, &["init", "-q"]);
     if let Some(m) = manifest {
-        let content = format!("{{\"apps/desktop/vitruvian-tool-github\":\"{}\"}}", m);
+        let content = format!("{{\"apps/extensions/atrium/vitruvian-github\":\"{}\"}}", m);
         fs::write(root.join(".release-please-manifest.json"), &content).unwrap();
     }
     fs::write(root.join("README.md"), "x\n").unwrap();
@@ -420,7 +420,7 @@ pub fn detect_problems(wf: &Workflow) -> Vec<String> {
         (Some("1.0.0"), vec!["v1.0.0"], 0, ""),
         (
             Some("1.0.0"),
-            vec!["vitruvian-tool-github-v1.0.0"],
+            vec!["vitruvian-github-v1.0.0"],
             0,
             "version=1.0.0",
         ),

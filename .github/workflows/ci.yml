@@ -1,9 +1,9 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 # Copyright (C) 2026 VitruvianSoftware
 
-# The GitHub tool's own CI in its mirror, VitruvianSoftware/vitruvian-tool-github.
+# Vitruvian GitHub's own CI in its mirror, VitruvianSoftware/vitruvian-github.
 # This file is written in vitruvian-core at
-# apps/desktop/vitruvian-tool-github/.github/workflows/ci.yml and reaches the
+# apps/extensions/atrium/vitruvian-github/.github/workflows/ci.yml and reaches the
 # mirror's root with every Copybara export; it runs only there. It builds
 # against the published kit (Package.swift), as a person cloning the mirror
 # would, so a kit the mirror cannot resolve is a red run here before a

@@ -4,10 +4,10 @@
 # Backstage TechDocs for the GitHub tool: what catalog-info.yaml's
 # techdocs-ref points at. The pages are docs/; the README is the one that
 # matters, and docs/index.md says so.
-site_name: vitruvian-tool-github
-site_description: The GitHub tool for the Vitruvian app (Swift, protocol 2), listed in the tool catalog
+site_name: vitruvian-github
+site_description: Vitruvian GitHub for Vitruvian Atrium (Swift, protocol 2), listed in the tool catalog
 repo_url: https://github.com/VitruvianSoftware/vitruvian-core
-edit_uri: edit/main/apps/desktop/vitruvian-tool-github/docs
+edit_uri: edit/main/apps/extensions/atrium/vitruvian-github/docs
 docs_dir: docs
 plugins:
   - techdocs-core

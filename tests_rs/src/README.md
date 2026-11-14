@@ -1,7 +1,7 @@
 # Src
 
 ## Overview
-Component package providing implementation for `apps/desktop/vitruvian-tool-github/tests_rs/src`.
+Component package providing implementation for `apps/extensions/atrium/vitruvian-github/tests_rs/src`.
 
 ## Interface
 - `[conformance.rs:ConformancePaths]`
@@ -34,4 +34,4 @@ Component package providing implementation for `apps/desktop/vitruvian-tool-gith
 - None
 
 ## Verification
-- Run: `bazel test //apps/desktop/vitruvian-tool-github/tests_rs/src/...`
+- Run: `bazel test //apps/extensions/atrium/vitruvian-github/tests_rs/src/...`

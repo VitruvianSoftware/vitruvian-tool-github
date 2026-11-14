@@ -1,6 +1,8 @@
-# The GitHub tool
+# Vitruvian GitHub
 
-Your pull requests and the checks on `main`, in the Vitruvian app's Dynamic
+Formerly **vitruvian-tool-github**. Releases up to 1.6.0 are tagged `vitruvian-tool-github-v*`; later ones are `vitruvian-github-v*`.
+
+Your pull requests and the checks on `main`, in Vitruvian Atrium's Dynamic
 Island, and on a GravaStar mouse's light. A tool from outside, written to
 protocol 2 with the Swift kit: the app draws its pages; the tool polls
 GitHub, signs you in and drives the mouse.
@@ -11,17 +13,17 @@ GPL-3.0-or-later like the app, not MIT like the kit it links.
 
 ## Get it
 
-In the app: the Vitruvian catalog on Settings › Extensions, GitHub,
+In the app: the Vitruvian catalog on Settings › Extensions, Vitruvian GitHub,
 Install. The app verifies the download against the signed catalog and shows
 the same agreement sheet as for any tool. Nothing here is audited by that:
 the tool runs as you, with every permission the app has.
 
-By hand: the zip on a [release](https://github.com/VitruvianSoftware/vitruvian-tool-github/releases),
+By hand: the zip on a [release](https://github.com/VitruvianSoftware/vitruvian-github/releases),
 unpacked anywhere, then Add from Folder… on Settings › Extensions.
 
 ## What it does
 
-- **In the island**, in the Explore gallery, a section "GitHub": each watched
+- **In the island**, in the Explore gallery, a section "Vitruvian GitHub": each watched
   repository with the colour of its `main` (green, amber, red, grey), what
   passed, failed and runs, and its branch and head (`main · a1b2c3d`); the
   merge queue of the repository in view, every entry in queue order with
@@ -88,10 +90,10 @@ Vitruvian 3.51 the tool's page is a section in the island's Explore gallery
 
 ## Build
 
-In vitruvian-core: `bazel build --config=macos-app //apps/desktop/vitruvian-tool-github:tool-folder`
+In vitruvian-core: `bazel build --config=macos-app //apps/extensions/atrium/vitruvian-github:tool-folder`
 leaves the tool's folder, with `vitruvian-tool.json` and `bin/tool`, under
-`bazel-bin/apps/desktop/vitruvian-tool-github/built/github/`. Tests:
-`bazel test --config=macos-app //apps/desktop/vitruvian-tool-github/...`.
+`bazel-bin/apps/extensions/atrium/vitruvian-github/built/github/`. Tests:
+`bazel test --config=macos-app //apps/extensions/atrium/vitruvian-github/...`.
 
 Here, in the mirror: `swift build -c release` against the published kit, as
 `release.yml` does; the release attaches `github-tool-X.Y.Z.zip` and its
@@ -109,4 +111,4 @@ SHA-256, which the catalog entry pins.
 - None
 
 ## Verification
-- Run: `bazel test //apps/desktop/vitruvian-tool-github/...`
+- Run: `bazel test //apps/extensions/atrium/vitruvian-github/...`

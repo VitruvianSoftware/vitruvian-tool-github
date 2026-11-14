@@ -6,7 +6,8 @@ use tests_rs_lib::version;
 
 fn base_dir() -> PathBuf {
     if let Ok(runfiles) = std::env::var("RUNFILES_DIR") {
-        let candidate = PathBuf::from(&runfiles).join("_main/apps/desktop/vitruvian-tool-github");
+        let candidate =
+            PathBuf::from(&runfiles).join("_main/apps/extensions/atrium/vitruvian-github");
         if candidate.join("vitruvian-tool.json").exists() {
             return candidate;
         }
